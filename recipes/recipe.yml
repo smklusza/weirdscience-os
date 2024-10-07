@@ -17,92 +17,92 @@ modules:
 
   - type: rpm-ostree
     repos:
-       - http://mirror.siena.edu/fedora/linux/updates/40/Everything/x86_64/
-       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-       - https://download.docker.com/linux/fedora/docker-ce.repo
+      - http://mirror.siena.edu/fedora/linux/updates/40/Everything/x86_64/
+      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-       # - micro
-       # - starship
-       - virt-manager
-       - libvirt
-       - samba
-       - docker-compose-plugin
-       - containerd.io
-       - docker-ce-cli
-        - docker-ce
-        - distrobox # run any os in containers easily
-        - podman-compose # Use docker.compose.yml files with podman
-        - ulauncher
-        - input-leap
-        - qemu
-        - firewalld
-        - plank
+      # - micro
+      # - starship
+      - virt-manager
+      - libvirt
+      - samba
+      - docker-compose-plugin
+      - containerd.io
+      - docker-ce-cli
+      - docker-ce
+      - distrobox # run any os in containers easily
+      - podman-compose # Use docker.compose.yml files with podman
+      - ulauncher
+      - input-leap
+      - qemu
+      - firewalld
+      - plank
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-       - firefox
-       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - firefox
+      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
-       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-       repo-name: flathub
-       repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
     install:
-        # Browsers
-        - io.github.zen_browser.zen
-        - com.brave.Browser
-        - net.mullvad.MullvadBrowser
-        # Office
-        - org.libreoffice.LibreOffice
-        - org.onlyoffice.desktopeditors
-        - md.obsidian.Obsidian
-        - org.zotero.Zotero
-        # - Media
-        - org.videolan.VLC
-        - net.sapples.LiveCaptions
-        - org.inkscape.Inkscape
-        # Network
-        - com.protonvpn.www
-        - org.gnome.World.PikaBackup
-        - org.mozilla.Thunderbird
-        # Science
-        - org.octave.Octave
-        - io.github.Qalculate
-        - se.sjoerd.Graphs
-        - org.scilab.Scilab
-        - org.gnumeric.Gnumeric
-        - org.openchemistry.Avogadro2
-        - org.kde.labplot2
-        - net.sourceforge.scidavis
-        - org.squey.Squey
-        - org.texmacs.TeXmacs
-        - de.marlam.gencolormap
-        # Development and containerization
-        - org.fedoraproject.MediaWriter
-        - io.podman_desktop.PodmanDesktop
-        - io.github.dvlv.boxbuddyrs
-        # Utilities
-        - io.github.flattool.Warehouse
-        - com.github.tchx84.Flatseal
-        - it.mijorus.gearlever
-        - io.github.peazip.PeaZip
-        - io.github.pwr_solaar.solaar
-        - com.github.ADBeveridge.Raider
-        - garden.jamie.Morphosisleap
-        - md.obsidian.Obsidian
-        - org.libreoffice.LibreOffice
-        - org.onlyoffice.desktopeditors
-        - io.github.zen_browser.zen
-        - com.brave.Browser
-        - com.protonvpn.www
-        - org.inkscape.Inkscape
-        - org.videolan.VLC
-        - org.zotero.Zotero
-        - io.github.peazip.PeaZip
-        - me.proton.Pass
+      # Browsers
+      - io.github.zen_browser.zen
+      - com.brave.Browser
+      - net.mullvad.MullvadBrowser
+      # Office
+      - org.libreoffice.LibreOffice
+      - org.onlyoffice.desktopeditors
+      - md.obsidian.Obsidian
+      - org.zotero.Zotero
+      # Media
+      - org.videolan.VLC
+      - net.sapples.LiveCaptions
+      - org.inkscape.Inkscape
+      # Network
+      - com.protonvpn.www
+      - org.gnome.World.PikaBackup
+      - org.mozilla.Thunderbird
+      # Science
+      - org.octave.Octave
+      - io.github.Qalculate
+      - se.sjoerd.Graphs
+      - org.scilab.Scilab
+      - org.gnumeric.Gnumeric
+      - org.openchemistry.Avogadro2
+      - org.kde.labplot2
+      - net.sourceforge.scidavis
+      - org.squey.Squey
+      - org.texmacs.TeXmacs
+      - de.marlam.gencolormap
+      # Development and containerization
+      - org.fedoraproject.MediaWriter
+      - io.podman_desktop.PodmanDesktop
+      - io.github.dvlv.boxbuddyrs
+      # Utilities
+      - io.github.flattool.Warehouse
+      - com.github.tchx84.Flatseal
+      - it.mijorus.gearlever
+      - io.github.peazip.PeaZip
+      - io.github.pwr_solaar.solaar
+      - com.github.ADBeveridge.Raider
+      - garden.jamie.Morphosisleap
+      - md.obsidian.Obsidian
+      - org.libreoffice.LibreOffice
+      - org.onlyoffice.desktopeditors
+      - io.github.zen_browser.zen
+      - com.brave.Browser
+      - com.protonvpn.www
+      - org.inkscape.Inkscape
+      - org.videolan.VLC
+      - org.zotero.Zotero
+      - io.github.peazip.PeaZip
+      - me.proton.Pass
       # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
@@ -110,10 +110,12 @@ modules:
     remove:
       - org.gnome.eog
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
   - type: systemd
     system:
       enabled:
         - libvirtd.service
         - smb.service
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
+
